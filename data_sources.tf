@@ -1,6 +1,4 @@
-data "aws_region" "current" {
-  current = true
-}
+data "aws_region" "current" {}
 
 data "aws_alb_listener" "http" {
   count = "${var.alb_listener_http == "__NOT_DEFINED__" ? 0 : 1}"
